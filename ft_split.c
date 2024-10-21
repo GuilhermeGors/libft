@@ -54,23 +54,23 @@ char	**ft_split(char const *s, char c)
 	int		index;
 
 	split = ft_calloc((count_words(s, c) + 1), sizeof(char *));
-	if (!split || !s)
+	if (!s || !split)
 		return (NULL);
-	i = -1;
+	i = 0;
 	j = 0;
 	index = -1;
-	while (s[++i])
+	while (s[i])
 	{
 		if (s[i] != c && index == -1)
 			index = i;
-		else if ((s[i] == c || s[i + 1] == '\0') && index != -1)
+		if ((s[i] == c || s[i + 1] == '\0') && index != -1)
 		{
 			split[j] = ft_substr(s, index, i - index + (s[i] != c));
-			if (!split[j])
+			if (!split[j++])
 				return (free_split(split, j), NULL);
-			j++;
 			index = -1;
 		}
+		i++;
 	}
 	return (split);
 }
