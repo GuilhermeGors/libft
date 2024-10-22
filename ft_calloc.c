@@ -6,7 +6,7 @@
 /*   By: gugomes- <gugomes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 23:38:27 by gugomes-          #+#    #+#             */
-/*   Updated: 2024/10/21 11:36:01 by gugomes-         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:34:00 by gugomes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	*ft_calloc(size_t num, size_t nsize)
 	void	*block;
 
 	if (num == 0 || nsize == 0)
-	{
 		size = 1;
-	}
 	size = num * nsize;
 	if (nsize != 0 && size / nsize != num)
 		return (NULL);
@@ -51,6 +49,6 @@ int main(void)
     {
         printf("arr[%zu] = %d\n", i, arr[i]);
     }
-    free(arr);ss
+    free(arr);
     return 0;
 }*/

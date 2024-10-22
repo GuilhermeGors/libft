@@ -6,13 +6,13 @@
 /*   By: gugomes- <gugomes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:53:37 by gugomes-          #+#    #+#             */
-/*   Updated: 2024/10/12 10:54:50 by gugomes-         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:34:21 by gugomes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_set(char c, char const *set)
+static int	is_in_set(char c, char const *set)
 {
 	int	i;
 

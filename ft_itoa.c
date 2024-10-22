@@ -6,13 +6,13 @@
 /*   By: gugomes- <gugomes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:34:41 by gugomes-          #+#    #+#             */
-/*   Updated: 2024/10/17 11:24:22 by gugomes-         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:36:27 by gugomes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_negative(int *n)
+static int	is_negative(int *n)
 {
 	if (*n < 0)
 	{
@@ -22,7 +22,7 @@ int	is_negative(int *n)
 	return (0);
 }
 
-int	count_digits(int n)
+static int	count_digits(int n)
 {
 	int	count;
 
@@ -37,7 +37,7 @@ int	count_digits(int n)
 	return (count);
 }
 
-void	fill_string(char *str, int n, int count, int sign)
+static void	fill_string(char *str, int n, int count, int sign)
 {
 	str[count--] = '\0';
 	if (n == 0)
